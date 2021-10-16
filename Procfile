@@ -1,0 +1,1 @@
+web: gunicorn buhin.wsgi
