@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8" />
+    <title>案件</title>
+</head>
+ 
+<body>
+    <h1>案件一覧</h1>
+    <p>{{ message }}</p>
+    <table border="1">
+        <tr>
+            <th>案件番号</th>
+            <th>件名</th>
+            <th>担当者</th>
+        </tr>
+        {% for anken in data %}
+        <tr>
+            <td>{{ anken.ankenid }}</td>
+            <td>{{ anken.item_name }}</td>
+            <td>{{ anken.ope_name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+ 
+</html>
