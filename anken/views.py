@@ -7,5 +7,8 @@ def index(request):
 
 def list(request):
     data = Anken.objects.all()
+#debug
+    print(data)
+
     params = {'message': '案件一覧', 'data': data}
     return render(request, 'anken/list.html', params)

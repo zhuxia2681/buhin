@@ -11,18 +11,31 @@
     <p>{{ message }}</p>
     <table border="1">
         <tr>
+            <th>No.</th>
             <th>案件番号</th>
             <th>件名</th>
             <th>担当者</th>
+            <th>作成日時</th>
+            <th>更新日時</th>
+            <th>種類</th>
+            <th>進捗</th>
+            <th>車台番号</th>
         </tr>
         {% for anken in data %}
         <tr>
-            <td>{{ anken.ankenid }}</td>
+            <td>{{ anken.id }}</td>
+            <td>{{ anken.anken_id }}</td>
             <td>{{ anken.item_name }}</td>
             <td>{{ anken.ope_name }}</td>
+            <td>{{ anken.created_at }}</td>
+            <td>{{ anken.updated_at }}</td>
+            <td>{{ anken.inq_type }}</td>
+            <td>{{ anken.progress }}</td>
+            <td>{{ anken.body_num }}</td>
         </tr>
         {% endfor %}
     </table>
+    <a href="{% url "index"  %}">home</a<
 </body>
  
 </html>
