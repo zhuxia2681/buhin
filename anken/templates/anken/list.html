@@ -25,12 +25,12 @@
             <td>{{ anken.id }}</td>
             <td>{{ anken.anken_id }}</td>
             <td>{{ anken.item_name }}</td>
-            <td>{{ anken.inq_type }}</td>
-            <td>{{ anken.progress }}</td>
+            <td>{{ anken.get_inq_type_display }}</td>
+            <td>{{ anken.get_progress_display }}</td>
             <td>{{ anken.body_num }}</td>
             <td>{{ anken.created_at }}</td>
             <td>{{ anken.updated_at }}</td>
-            <td>{{ anken.ope_name }}</td>
+            <td>{{ anken.ope_name }}</td>		
         </tr>
         {% endfor %}
     </table>
