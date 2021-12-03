@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8" />
+    <title>案件一覧</title>
+</head>
+ 
+<body>
+    <h1>{{ message }}</h1>
+    <table border="1">
+        <tr>
+            <th>No.</th>
+            <th>案件番号</th>
+            <th>件名</th>
+            <th>種類</th>
+            <th>進捗</th>
+            <th>車台番号</th>
+            <th>作成日時</th>
+            <th>更新日時</th>
+            <th>担当者</th>
+        </tr>
+        {% for anken in data %}
+        <tr>
+            <td>{{ anken.id }}</td>
+            <td>{{ anken.anken_id }}</td>
+            <td>{{ anken.item_name }}</td>
+            <td>{{ anken.get_inq_type_display }}</td>
+            <td>{{ anken.get_progress_display }}</td>
+            <td>{{ anken.body_num }}</td>
+            <td>{{ anken.created_at }}</td>
+            <td>{{ anken.updated_at }}</td>
+            <td>{{ anken.ope_name }}</td>		
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <hr>
+    <a href="{% url "home"  %}">home</a<
+</body>
+ 
+</html>
